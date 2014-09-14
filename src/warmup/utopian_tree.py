@@ -1,6 +1,10 @@
-def tree_height(num_cycles = 0):
+'''
+@author: rahul
+'''
+
+def tree_height(N = 0):
     height = 0
-    for i in range(0, num_cycles+1):
+    for i in range(N+1):
         if i % 2:
             height += height
         else:
@@ -8,7 +12,7 @@ def tree_height(num_cycles = 0):
     return height
         
 if __name__ == '__main__':
-    num_tests = input()
-    for i in range(0, num_tests):
-        n = input()
-        print tree_height(n)
+    T = input()
+    for i in range(T):
+        N = input()
+        print tree_height(N)
